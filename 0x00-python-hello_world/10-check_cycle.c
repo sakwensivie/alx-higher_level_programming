@@ -11,19 +11,18 @@ int check_cycle(listint_t *list)
 {
 	listint_t *curr_1, *curr_2;
 
-	curr_1 = curr_2 = list;
+	curr_1 = list;
+	curr_2 = list->next;
 
 	if ((list == NULL) || (list->next))
 		return (0);
 
-	while (1)
+	while ((curr_1 != NULL) && (curr_2 != NULL) && (curr_2->next != NULL))
 	{
-		curr_1 = curr_1->next;
-		curr_2 = (curr_2->next)->next;
-
 		if (curr_1 == curr_2)
 			return (1);
-		if ((curr_1 == NULL) || (curr_2 == NULL))
-			return (0);
+		curr_1 = curr_1->next;
+		curr_2 = curr_2->next->next;
 	}
+	return (0);
 }
