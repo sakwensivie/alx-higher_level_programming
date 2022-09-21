@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 def print_last_digit(num):
     '''prints and returns the last digit of the input num'''
     if num >= 0:
