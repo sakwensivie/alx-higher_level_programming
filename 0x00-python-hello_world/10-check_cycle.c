@@ -10,7 +10,6 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *curr_1, *curr_2;
-	unsigned int i;
 
 	curr_1 = curr_2 = list;
 
