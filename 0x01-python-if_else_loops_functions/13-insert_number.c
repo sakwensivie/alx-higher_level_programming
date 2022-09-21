@@ -9,7 +9,7 @@
  * Return: the linked list
  */
 
-listint_t *insert_node(listint_t **head, int number);
+listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *new, *first, *second;
 
@@ -33,7 +33,7 @@ listint_t *insert_node(listint_t **head, int number);
 		first = first->next;
 		second = second->next;
 
-		if ((first->n <= number) && (second >= number))
+		if ((first->n <= number) && (second->n >= number))
 			break;
 	}
 
