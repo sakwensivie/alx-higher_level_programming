@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-if __name__ == '__main__':
-    def no_c(my_string):
+def no_c(my_string):
+    length = len(my_string)
 
-        test_string = my_list[:]
-        j = 0
-        for i in range(test_string):
-            if (test_string[i] == c) or (test_string[i] == C):
-                a = my_list[:i - j]
-                b = my_list[(i + 1):]
-                test_string = a + b
-                j += 1
+    j = 0
 
-    return (test_string)
+    new_string = my_string[:]
+
+    for i in range(length):
+        if (my_string[i] == 'c' or my_string[i] == 'C'):
+            new_string = new_string[:(i - j)] + my_string[(i + 1):]
+            j += 1
+
+    return (new_string))
