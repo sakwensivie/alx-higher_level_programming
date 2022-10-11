@@ -3,11 +3,9 @@ class Square:
     '''
         Class that defines a square
     '''
-    def __init__(self, size=0)
-        '''
-            Initializes the class with certain paramemters
-            
-            Args:
+    def __init__(self, size=0):
+        '''Initializes the class with certain paramemters
+             Args:
                 size (int): size of the square
         '''
         if not isinstance(size, int):
