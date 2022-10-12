@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 '''A module that defines a class for a square
 '''
+
+
 class Square:
     '''
         Class that defines a square
@@ -15,4 +17,4 @@ class Square:
         elif size < 0:
             raise ValueError('size must be >= 0')
         else:
-            self._size = size
+            self.__size = int(size)
