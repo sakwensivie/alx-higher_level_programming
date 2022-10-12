@@ -6,7 +6,7 @@
 class Square:
     '''Class that defines a square
     '''
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         '''Initializes the class with certain paramemters
             Args:
                 size (int): size of the square
@@ -17,6 +17,13 @@ class Square:
             raise ValueError('size must be >= 0')
         else:
             self.__size = size
+
+        if not isinstance(position[0], int)  or not isinstance(position[1], int):
+            raise TypeError('position must be a tuple of 2 positive integers')
+        elif ((position[0] < 0) or (position[1] < 0)):
+            raise TypeError('position must be a tuple of 2 positive integers')
+        else:
+            self.__position = position
 
     def area(self):
         '''Returns the area of the square
@@ -46,6 +53,30 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = int(value)
+
+    @property
+    def position(self):
+        '''A property method to return the position of a square class
+        '''
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        ''' A setter method to set the value of the position
+
+            args:
+                value (tuple): position
+
+            returns:
+                None
+        '''
+
+        if (not isinstance(value[0], int) or not isinstance(value[1])):
+            raise TypeError('position must be a tuple of 2 positive integers')
+        elif ((value[0] < 0) or (value[1] < 0)):
+            raise TypeError('position must be a tuple of 2 positive integers')
+        else:
+            self.__position = value
 
     def my_print(self):
         '''A method that prints the square
