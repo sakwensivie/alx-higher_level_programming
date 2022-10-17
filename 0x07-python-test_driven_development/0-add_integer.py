@@ -3,6 +3,7 @@
 This module contains a funciton that adds two intergers
 '''
 
+
 def add_integer(a, b=98):
     '''
     This function adds and returns the value of two integers
@@ -13,7 +14,7 @@ def add_integer(a, b=98):
 
     returns: the sum of the two numbers
 
-    raises: 
+    raises:
         TypeError if any of the args are not either an integer of a float
     '''
 
