@@ -4,10 +4,10 @@ The '0-add_integer' module
 Usint 'add_interger' function
 
 importing the function from the module
-    >>>add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer = __import__('0-add_integer').add_integer
 
 Adding 1 and 2
-    >>> and_integer(1, 2)
+    >>> add_integer(1, 2)
     3
 
 Adding 100 and -2
