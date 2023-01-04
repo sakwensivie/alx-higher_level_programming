@@ -1,3 +1,3 @@
 -- lists all tables
 
-SHOW TABLES
+SHOW TABLES IF EXISTS
